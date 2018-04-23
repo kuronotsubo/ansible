@@ -1,0 +1,10 @@
+- name: download Wordpress
+  get_url:
+    url: https://ja.wordpress.org/wordpress-4.9.5-ja.zip
+    dest: /tmp
+
+- name: unarchive Wordpress
+  unarchive:
+    src: /tmp/wordpress-4.9.5-ja.zip
+    dest: /var/www/html
+    remote_src: yes
